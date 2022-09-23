@@ -1,4 +1,4 @@
-# lab2-springboot
+# Microserviço Professor
 
 Exemplo de projeto de implementação de microserviço usando java spring boot
 Banco de dados postgres
