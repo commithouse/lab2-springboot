@@ -5,7 +5,9 @@ services:
     container_name: ms
     build: .
     ports:
-      - 8080:8080  
+      - 8080:8080
+    depends_on:
+      - db
   db:
     image: postgres:11
     container_name: db

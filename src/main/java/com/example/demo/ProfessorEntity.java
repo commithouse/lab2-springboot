@@ -8,7 +8,7 @@ import java.util.Objects;
 @Table(name = "professor", schema = "public", catalog = "postgres")
 public class ProfessorEntity {
     private long id;
-    private Time dtNascimento;
+    private String dtNascimento;
     private String email;
     private String endereco;
     private String nome;
@@ -17,6 +17,8 @@ public class ProfessorEntity {
 
     @Id
     @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
+    @SequenceGenerator(name = "sequenceGenerator")
     public long getId() {
         return id;
     }
@@ -27,11 +29,11 @@ public class ProfessorEntity {
 
     @Basic
     @Column(name = "dt_nascimento")
-    public Time getDtNascimento() {
+    public String getDtNascimento() {
         return dtNascimento;
     }
 
-    public void setDtNascimento(Time dtNascimento) {
+    public void setDtNascimento(String dtNascimento) {
         this.dtNascimento = dtNascimento;
     }
 

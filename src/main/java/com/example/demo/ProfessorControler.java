@@ -8,7 +8,7 @@ import java.util.List;
 
 @RequestMapping("/professor")
 @RestController
-public class ProfessorControle {
+public class ProfessorControler {
 
     @Autowired
     ProfessorRepository repository;
